@@ -61,7 +61,7 @@ public class Game {
     public void printEachRacingCarsPosition(RacingCars racingCars){
         for(int idx = 0; idx < racingCars.size(); idx++){
             RacingCar racingCar = racingCars.returnRacingCarAtIndex(idx);
-            System.out.println(racingCar.getName() + racingCar.getRacingCarPosition());
+            System.out.println(racingCar.getName() + " "+ racingCar.positionToString());
         }
     }
 
