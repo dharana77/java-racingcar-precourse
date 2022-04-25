@@ -4,6 +4,8 @@ import camp.nextstep.edu.missionutils.Console;
 
 
 public class Game {
+    private final String inputCarNamesMessage = "차이름을 입력하세요.:띄워쓰기 없이 쉼표로 구분합니다.";
+
     public Game(){
     }
 
@@ -48,5 +50,9 @@ public class Game {
     public int inputRepeatCount(){
         String repeatCount = Console.readLine();
         return Integer.parseInt(repeatCount);
+    }
+
+    public void printInputCarNamesMessege(){
+        System.out.println(inputCarNamesMessage);
     }
 }

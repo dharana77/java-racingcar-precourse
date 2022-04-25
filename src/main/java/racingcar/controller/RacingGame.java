@@ -17,6 +17,7 @@ public class RacingGame {
 
     public void playGame(){
         Game game = new Game();
+        game.printInputCarNamesMessege();
         String[] carNameList = game.inputRacingCarName();
         game.checkIllegalCarNameInputs(carNameList);
         for(int idx=0; idx<carNameList.length; idx++){
