@@ -7,6 +7,7 @@ import java.util.List;
 
 public class Game {
     private final String inputCarNamesMessage = "차이름을 입력하세요.:띄워쓰기 없이 쉼표로 구분합니다.";
+    private final String errorMessage = "[ERROR]: 입력이 잘못되었습니다.";
 
     public Game(){
     }
@@ -45,7 +46,7 @@ public class Game {
 
     public void checkIllegalCarNameInputs(String[] carNameList){
         if(!checkAllCarNameValidations(carNameList)){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException(errorMessage);
         }
     }
 
