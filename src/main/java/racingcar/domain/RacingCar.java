@@ -24,11 +24,14 @@ public class RacingCar {
     }
 
     public String positionToString(){
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(this.position);
+        String stringPosition = "";
         for(int idx = 0; idx < this.position; idx++){
-            stringBuilder.append("-");
+            stringPosition += "-";
         }
-        return stringBuilder.toString();
+        return stringPosition;
+    }
+
+    public String getName(){
+        return this.name;
     }
 }

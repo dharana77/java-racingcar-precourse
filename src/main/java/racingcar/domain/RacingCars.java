@@ -20,4 +20,8 @@ public class RacingCars {
     public RacingCar returnRacingCarAtIndex(int index){
         return racingCars.get(index);
     }
+
+    public int size(){
+        return racingCars.size();
+    }
 }

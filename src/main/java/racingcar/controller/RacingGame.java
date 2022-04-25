@@ -20,7 +20,7 @@ public class RacingGame {
         game.printInputCarNamesMessege();
         String[] carNameList = game.inputRacingCarName();
         game.checkIllegalCarNameInputs(carNameList);
-        for(int idx=0; idx<carNameList.length; idx++){
+        for(int idx = 0; idx < carNameList.length; idx++){
             RacingCar racingCar = new RacingCar(carNameList[idx]);
             racingCars.addCar(racingCar);
         }
@@ -30,9 +30,9 @@ public class RacingGame {
                 int randomNumber = RandomNumberGenerator.generateRandomNumber();
                 racingCars.returnRacingCarAtIndex(idx).moveCarOrNot(randomNumber);
             }
-            //printRacingCarsPosition
+            game.printEachRacingCarsPosition(racingCars);
             repeatCount--;
         }
-
+        //printWinners();
     }
 }
