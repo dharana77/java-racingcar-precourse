@@ -23,6 +23,7 @@ public class RacingGame {
         for(int idx = 0; idx < carNameList.length; idx++){
             RacingCar racingCar = new RacingCar(carNameList[idx]);
             racingCars.addCar(racingCar);
+            System.out.println(carNameList[idx]);
         }
         System.out.println("반복 횟수를 입력하세요.");
         int repeatCount = game.inputRepeatCount();

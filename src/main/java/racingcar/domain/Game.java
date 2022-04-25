@@ -1,6 +1,8 @@
 package racingcar.domain;
 
 import camp.nextstep.edu.missionutils.Console;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
@@ -63,8 +65,8 @@ public class Game {
         }
     }
 
-    public List<RacingCar> getWinners(RacingCars racingCars){
-        List<RacingCar> winners = null;
+    public ArrayList<RacingCar> getWinners(RacingCars racingCars){
+        ArrayList<RacingCar> winners = new ArrayList<RacingCar>();
         int maxPosition = 0;
         for(int idx = 0; idx < racingCars.size(); idx++){
             RacingCar racingCar = racingCars.returnRacingCarAtIndex(idx);
