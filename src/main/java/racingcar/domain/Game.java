@@ -21,7 +21,21 @@ public class Game {
         return !racingCarName.contains(" ");
     }
 
-    public boolean isValidateCarName(String racingCarName){
-        return isValidRacingCarNameLength(racingCarName) && isValidRacingCarNameContainsSpace(racingCarName);
+    public int isValidateCarName(String racingCarName){
+        if(isValidRacingCarNameLength(racingCarName) && isValidRacingCarNameContainsSpace(racingCarName)){
+            return 1;
+        }
+        return 0;
+    }
+
+    public boolean checkAllCarNameValidations(String[] racingCarNames){
+        int count = 0;
+        for(int idx = 0; idx<racingCarNames.length; idx++){
+            count += isValidateCarName(racingCarNames[idx]);
+        }
+        if(count == racingCarNames.length){
+            return true;
+        }
+        return false;
     }
 }
