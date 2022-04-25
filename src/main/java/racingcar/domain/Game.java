@@ -38,4 +38,15 @@ public class Game {
         }
         return false;
     }
+
+    public void checkIllegalCarNameInputs(String[] carNameList){
+        if(!checkAllCarNameValidations(carNameList)){
+            throw new IllegalArgumentException();
+        }
+    }
+
+//    public int inputRepeatCount(){
+//        String repeatCount = Console.readLine();
+//        return Integer.parseInt(repeatCount);
+//    }
 }

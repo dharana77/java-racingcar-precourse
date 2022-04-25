@@ -17,6 +17,16 @@ public class RacingGame {
     public void playGame(){
         Game game = new Game();
         String[] carNameList = game.inputRacingCarName();
-        
+        game.checkIllegalCarNameInputs(carNameList);
+        for(int idx=0; idx<carNameList.length; idx++){
+            RacingCar racingCar = new RacingCar(carNameList[idx]);
+            racingCars.addCar(carNameList[idx]);
+        }
+//        int repeatCount = game.inputRepeatCount();
+//        while(repeatCount){
+//            generateRandomNumber();
+//            repeatCount--;
+//        }
+
     }
 }
