@@ -14,4 +14,13 @@ public class RacingCar {
     public void moveRacingCar(){
         this.position += 1;
     }
+
+    public String positionToString(){
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(this.position);
+        for(int idx = 0; idx < this.position; idx++){
+            stringBuilder.append("-");
+        }
+        return stringBuilder.toString();
+    }
 }
