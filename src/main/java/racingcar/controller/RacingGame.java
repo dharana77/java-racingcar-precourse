@@ -33,6 +33,7 @@ public class RacingGame {
             game.printEachRacingCarsPosition(racingCars);
             repeatCount--;
         }
-        //printWinners();
+
+        game.printWinners(game.getWinners(racingCars));
     }
 }

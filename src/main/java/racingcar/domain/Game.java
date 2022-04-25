@@ -1,7 +1,7 @@
 package racingcar.domain;
 
 import camp.nextstep.edu.missionutils.Console;
-
+import java.util.List;
 
 public class Game {
     private final String inputCarNamesMessage = "차이름을 입력하세요.:띄워쓰기 없이 쉼표로 구분합니다.";
@@ -61,5 +61,33 @@ public class Game {
             RacingCar racingCar = racingCars.returnRacingCarAtIndex(idx);
             System.out.println(racingCar.getName() + racingCar.getRacingCarPosition());
         }
+    }
+
+    public List<RacingCar> getWinners(RacingCars racingCars){
+        List<RacingCar> winners = null;
+        int maxPosition = 0;
+        for(int idx = 0; idx < racingCars.size(); idx++){
+            RacingCar racingCar = racingCars.returnRacingCarAtIndex(idx);
+            maxPosition =maxPosition >= racingCar.getRacingCarPosition() ? maxPosition :racingCar.getRacingCarPosition();
+        }
+        for(int idx = 0; idx < racingCars.size(); idx++){
+            RacingCar racingCar = racingCars.returnRacingCarAtIndex(idx);
+            if(racingCar.getRacingCarPosition() == maxPosition){
+                winners.add(racingCar);
+            }
+        }
+        return winners;
+    }
+
+    public void printWinners(List<RacingCar> winners){
+        String winnersList = "";
+        for(int idx = 0; idx< winners.size(); idx++){
+            winnersList += winners.get(idx).getName();
+            winnersList += ",";
+        }
+        if (winners.size() == 1){
+            winnersList = winnersList.substring(0, winnersList.length()-1);
+        }
+        System.out.println(winnersList);
     }
 }
