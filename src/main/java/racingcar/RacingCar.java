@@ -1,17 +1,25 @@
 package racingcar;
 
 public class RacingCar {
-
     private int position;
+    private String name;
 
-    public RacingCar(){
+    public RacingCar(String racingCarName){
+        this.position = 0;
+        this.name = racingCarName;
     }
-    
+
     public int getRacingCarPosition(){
         return this.position;
     }
 
-    public void moveRacingCar(){
+    public void moveCarOrNot(int generatedNumber){
+        if(generatedNumber >= 4){
+            moveRacingCar();
+        }
+    }
+
+    private void moveRacingCar(){
         this.position += 1;
     }
 
