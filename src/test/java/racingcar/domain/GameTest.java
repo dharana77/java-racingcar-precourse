@@ -14,7 +14,7 @@ public class GameTest {
     @Test
     @DisplayName(value = "게임 자동차 이름 입력 범위 테스트")
     void inputRacingCarNameTest(){
-        assertThat(game.isValidRacingCarName(carNameInputLengthIsFive));
-        assertThat(game.isValidRacingCarName(carNameInputFailByLengthOverFive));
+        assertThat(game.isValidRacingCarNameLength(carNameInputLengthIsFive));
+        assertThat(game.isValidRacingCarNameLength(carNameInputFailByLengthOverFive));
     }
 }
