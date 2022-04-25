@@ -45,8 +45,8 @@ public class Game {
         }
     }
 
-//    public int inputRepeatCount(){
-//        String repeatCount = Console.readLine();
-//        return Integer.parseInt(repeatCount);
-//    }
+    public int inputRepeatCount(){
+        String repeatCount = Console.readLine();
+        return Integer.parseInt(repeatCount);
+    }
 }

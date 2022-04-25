@@ -4,16 +4,20 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class RacingCars {
-    private List<String> racingCars = new LinkedList<>();
+    private List<RacingCar> racingCars = new LinkedList<>();
 
     public RacingCars(){
     }
 
-    public void addCar(String racingCar){
+    public void addCar(RacingCar racingCar){
         racingCars.add(racingCar);
     }
 
-    public List<String> returnRacingCars(){
+    public List<RacingCar> returnRacingCars(){
         return racingCars;
+    }
+
+    public RacingCar returnRacingCarAtIndex(int index){
+        return racingCars.get(index);
     }
 }
